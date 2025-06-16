@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --background-color: #f4f4f4;
     --text-color: #333;
@@ -5,6 +6,7 @@
     --border-color: #ccc;
 }
 
+/* Estilos globales */
 html, body {
     height: 100%;
     margin: 0;
@@ -19,25 +21,12 @@ body {
     padding: 0;
 }
 
+/* Header y Footer */
 header, footer {
     background-color: var(--text-color);
     color: #fff;
     text-align: center;
     padding: 1rem;
-}
-
-main {
-    flex: 1;
-    padding: 2rem;
-}
-
-h1, h2 {
-    margin: 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 footer {
@@ -46,6 +35,22 @@ footer {
     width: 100%;
 }
 
+/* Main */
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estudiantes */
 #students {
     display: flex;
     flex-wrap: wrap;
@@ -58,20 +63,15 @@ article {
     padding: 1rem;
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    flex: 1 1 calc(33.333% - 1rem); /* Ocupa un tercio del ancho disponible */
-    max-width: 300px; /* Limitar el ancho máximo */
-    box-sizing: border-box; /* Incluir padding y border en el tamaño */
+    max-width: 300px; 
+    box-sizing: border-box; 
 }
 
-article strong {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
+/* Formularios */
 input, select {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
