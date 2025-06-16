@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Website</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Students Website</h1>
+    </header>
+    <main>
+
+        <section id="add-student">
+            <h2>Add New Student</h2>
+            <form id="student-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="course">Course:</label>
+                <select id="course" required>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                </select>
+                <button type="submit">Add Student</button>
+            </form>
+        </section>
+
+        <section id="unique-filter">
+            <h2>Filter by email</h2>
+            <div>
+                <label for="email-filter">Enter Email:</label>
+                <input type="email" id="email-filter" placeholder="Search email" required>
+                <button id="email-search-button">Search</button>
+                <button id="email-clear-button">Clear</button>
+            </div>
+            <section id="filtered-student">
+                <!-- Filtered student will be displayed here -->
+            </section>
+        </section>
+
+        <section id="combined-filters">
+            <h2>Combined filters</h2>
+            <label for="age-filter">Filter by age:</label>
+            <select id="age-filter">
+                <option value="all">All</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+            </select>
+            <label for="course-filter">Filter by course:</label>
+            <select id="course-filter">
+                <option value="all">All</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Data Science">Data Science</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Machine Learning">Machine Learning</option>
+            </select>
+            <label for="email-search">Search by email:</label>
+            <input type="text" id="email-search" placeholder="Enter email">
+
+        </section>
+        <section id="students">
+            <!-- Student items will be dynamically added here -->
+        </section>
+  
+    </main>
+    <footer>
+        <p>&copy; 2025 Student Project</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
