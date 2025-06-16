@@ -8,6 +8,7 @@ Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incl
 
 - **HTML**: Estructura del contenido.
 - **CSS**: Estilos y diseño visual.
+- **normalize.css**: Para asegurar estilos consistentes entre navegadores.
 - **JavaScript**: Lógica interactiva y dinámica.
 
 ## Conocimientos practicados
@@ -61,6 +62,7 @@ Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incl
 ## Estructura del proyecto
 
 - **index.html**: Página principal con la estructura del contenido.
+- **styles/normalize.css**: Archivo para asegurar estilos consistentes entre navegadores.
 - **styles/style.css**: Archivo de estilos para el diseño visual.
 - **script.js**: Archivo JavaScript con la lógica interactiva.
 - **README.md**: Documentación del proyecto.
