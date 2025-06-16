@@ -51,7 +51,7 @@ Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incl
 
 2. Navega a la carpeta del proyecto:
    ```bash
-   cd web_js_dom
+   cd web_js_dom_students
    ```
 
 3. Abre el archivo `index.html` en tu navegador:
