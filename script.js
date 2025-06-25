@@ -53,16 +53,44 @@ function renderStudentList(studentData) {
       <p><b>Email:</b> ${student.email}</p>
       <p><b>Course:</b> ${student.course}</p>
       <button class="delete-button">Delete</button>
+      <button class="edit-button">Edit</button>
     `;
 
     // Lógica para botón de borrar
     const deleteButton = article.querySelector(".delete-button");
-    
-    // Evento para manejar el borrado de un student
     deleteButton.addEventListener("click", () => {
       students.splice(index, 1); // Borrar estudiante del array
       article.remove(); // Borrar el elemento del DOM
     });
+
+    // Lógica para botón de editar
+    const editButton = article.querySelector(".edit-button");
+    editButton.addEventListener("click", () => {
+      article.innerHTML = `
+        <form class="edit-form">
+          <label>Name: <input type="text" name="name" value="${student.name}" required></label>
+          <label>Age: <input type="number" name="age" value="${student.age}" required></label>
+          <label>Email: <input type="email" name="email" value="${student.email}" required></label>
+          <label>Course: <input type="text" name="course" value="${student.course}" required></label>
+          <button type="submit">Save</button>
+        </form>
+      `;
+
+      const editForm = article.querySelector(".edit-form");
+      editForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del formulario
+
+        // Actualizar datos del estudiante
+        student.name = editForm.elements.name.value.trim();
+        student.age = parseInt(editForm.elements.age.value.trim());
+        student.email = editForm.elements.email.value.trim();
+        student.course = editForm.elements.course.value.trim();
+
+        // Renderizar el artículo actualizado
+        renderStudentList(studentData);
+      });
+    });
+
     // Añadir article al DOM
     studentList.appendChild(article);
   });

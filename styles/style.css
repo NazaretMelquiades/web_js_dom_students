@@ -99,3 +99,16 @@ button.delete-button {
 button.delete-button:hover {
     background-color: #c0392b;
 }
+
+/* Modal styles */
+.modal {
+  display: none; /* Remove modal-related styles */
+}
+
+.hidden {
+  display: none; /* Remove hidden class */
+}
+
+#edit-form {
+  display: none; /* Remove edit form styles */
+}
