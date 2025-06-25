@@ -45,14 +45,25 @@ function renderStudentList(studentData) {
   const studentList = document.getElementById("students");
   studentList.innerHTML = ""; // Limpiar la lista
 
-  studentData.forEach((student) => {
+  studentData.forEach((student, index) => {
     const article = document.createElement("article");
     article.innerHTML = `
       <p><b>Name:</b> ${student.name}</p>
       <p><b>Age:</b> ${student.age}</p>
       <p><b>Email:</b> ${student.email}</p>
       <p><b>Course:</b> ${student.course}</p>
+      <button class="delete-button">Delete</button>
     `;
+
+    // Lógica para botón de borrar
+    const deleteButton = article.querySelector(".delete-button");
+    
+    // Evento para manejar el borrado de un student
+    deleteButton.addEventListener("click", () => {
+      students.splice(index, 1); // Borrar estudiante del array
+      article.remove(); // Borrar el elemento del DOM
+    });
+    // Añadir article al DOM
     studentList.appendChild(article);
   });
 }
@@ -79,7 +90,7 @@ document.getElementById("student-form").addEventListener("submit", (event) => {
 
 function filterByEmail(email) {
     for (let i = 0; i < students.length; i++) {
-        if (students[i].email.toLowerCase() === email.toLowerCase()) {
+        if (students[i].email === email) {
             return students[i];
         }
     }

@@ -90,3 +90,12 @@ button {
 button:hover {
     background-color: var(--button-hover-color);
 }
+
+button.delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button.delete-button:hover {
+    background-color: #c0392b;
+}
