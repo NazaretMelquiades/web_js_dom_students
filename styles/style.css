@@ -90,3 +90,25 @@ button {
 button:hover {
     background-color: var(--button-hover-color);
 }
+
+button.delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Remove modal-related styles */
+}
+
+.hidden {
+  display: none; /* Remove hidden class */
+}
+
+#edit-form {
+  display: none; /* Remove edit form styles */
+}

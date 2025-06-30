@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incluye funcionalidades para agregar nuevos estudiantes, buscar por email y aplicar filtros combinados. Es ideal para practicar conceptos básicos de desarrollo web y manipulación del DOM.
+Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incluye funcionalidades para agregar nuevos estudiantes, buscar por email, aplicar filtros combinados y editar o borrar estudiantes directamente desde la lista. Es ideal para practicar conceptos básicos de desarrollo web y manipulación del DOM.
 
 ## Tecnologías utilizadas
 
@@ -18,6 +18,7 @@ Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incl
   - Manejo de eventos (`addEventListener`) para interactividad.
   - Filtrar y buscar datos en arrays para actualizar el contenido del DOM.
   - Limpiar y actualizar secciones del DOM (`innerHTML = ""`).
+  - Editar y borrar elementos directamente desde el DOM.
 - **Uso de template strings**:
   - Generar contenido dinámico en HTML utilizando interpolación de variables con backticks (`` ` ``).
 - **Evento `DOMContentLoaded`**:
@@ -42,6 +43,10 @@ Este proyecto es una demo interactiva para gestionar y filtrar estudiantes. Incl
 3. **Filtros combinados**:
    - Filtros por edad, curso y búsqueda por email.
    - Los filtros se aplican de manera combinada para mostrar resultados específicos.
+
+4. **Editar y borrar estudiantes**:
+   - Cada estudiante tiene un botón para editar sus datos directamente en el DOM mediante un formulario dentro del `article`.
+   - También incluye un botón para borrar el estudiante de la lista y del array.
 
 ## Cómo ejecutarlo
 
